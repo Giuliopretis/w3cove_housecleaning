@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "93917365309",
+    "project_id": "w3covehousecleaning",
+    "storage_bucket": "w3covehousecleaning.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93917365309:android:15ae69300ba778032d5654",
+        "android_client_info": {
+          "package_name": "com.example.w3cove_housecleaning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93917365309-gdfra31b28pshhh4p36to6a0hmckvs21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0E-m1ukZEOcma2u7pMKWjZxEYy-hjpys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93917365309-gdfra31b28pshhh4p36to6a0hmckvs21.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "93917365309-qbifetobe1t1c3rsrpcqps9pjue8b3ji.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.w3coveHousecleaning"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
