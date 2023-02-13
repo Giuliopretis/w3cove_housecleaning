@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:w3cove_housecleaning/data/api_provider.dart';
+import 'package:w3cove_housecleaning/data/states/operations_state.dart';
+import 'package:w3cove_housecleaning/presentation/works/operations_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,6 +13,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final ApiProvider _apiProvider = ApiProvider();
+  final OperationsStateController _stateController =
+      Get.put(OperationsStateController());
 
   @override
   void initState() {
@@ -23,7 +28,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Hola'),
       ),
-      body: const Placeholder(),
+      body: const OperationsList(),
     );
   }
 }
