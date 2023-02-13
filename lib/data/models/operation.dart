@@ -3,6 +3,9 @@
 //     final operation = operationFromMap(jsonString);
 
 import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:w3cove_housecleaning/data/models/user.dart';
+import 'package:w3cove_housecleaning/data/models/type.dart';
 
 Operation operationFromMap(String str) => Operation.fromMap(json.decode(str));
 
@@ -15,15 +18,17 @@ class Operation {
     required this.date,
   });
 
-  final String type;
-  final String user;
-  final DateTime date;
+  final Type type;
+  final User user;
+  final Timestamp date;
 
-  factory Operation.fromMap(Map<String, dynamic> json) => Operation(
-        type: json["type"],
-        user: json["user"],
-        date: json["date"],
-      );
+  factory Operation.fromMap(Map<String, dynamic> json) {
+    return Operation(
+      type: Type.fromMap(json["type"]),
+      user: User.fromMap(json["user"]),
+      date: json["date"],
+    );
+  }
 
   Map<String, dynamic> toMap() => {
         "type": type,
