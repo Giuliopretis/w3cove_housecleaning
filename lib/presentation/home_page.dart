@@ -29,6 +29,29 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Hola'),
       ),
       body: const OperationsList(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: openAddOperationModal,
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+
+  openAddOperationModal() {
+    showDialog(
+      context: context,
+      builder: (_) => Dialog.fullscreen(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('data'),
+                IconButton(onPressed: () {}, icon: Icon(Icons.close))
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
