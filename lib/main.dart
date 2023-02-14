@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:w3cove_housecleaning/firebase_options.dart';
+import 'package:w3cove_housecleaning/presentation/resources/theme_manager.dart';
 
 import 'presentation/home_page.dart';
 
@@ -19,10 +20,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'W3coveHousecleaning',
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-      ),
+      darkTheme: getApplicationTheme(),
+      themeMode: ThemeMode.dark,
       home: const HomePage(),
+      // darkTheme: getApplicationTheme(),
     );
   }
 }
