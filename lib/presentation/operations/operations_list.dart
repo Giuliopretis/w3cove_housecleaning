@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:w3cove_housecleaning/data/models/operation.dart';
-import 'package:w3cove_housecleaning/data/states/operations_state.dart';
+import 'package:w3cove_housecleaning/presentation/operations/operation_view_model.dart';
 import 'package:w3cove_housecleaning/presentation/resources/value_manager.dart';
 
 class OperationsList extends StatefulWidget {
@@ -15,13 +15,13 @@ class OperationsList extends StatefulWidget {
 class _OperationsListState extends State<OperationsList> {
   @override
   Widget build(BuildContext context) {
-    final OperationsStateController stateController = Get.find();
+    final OperationViewModel operationViewModel = Get.find();
 
     return Obx(() {
       return ListView.builder(
-          itemCount: stateController.operations.length,
+          itemCount: operationViewModel.operations.length,
           itemBuilder: (_, int index) {
-            Operation operation = stateController.operations[index];
+            Operation operation = operationViewModel.operations[index];
             String date = DateFormat('d/M/y')
                 .format(DateTime.parse(operation.date.toDate().toString()))
                 .toString();

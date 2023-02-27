@@ -22,8 +22,10 @@ ThemeData getApplicationTheme() {
     // text theme
     // textTheme: GoogleFonts.latoTextTheme(),
     // input decoration theme
-    inputDecorationTheme: const InputDecorationTheme(
-      border: OutlineInputBorder(),
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(AppSize.s24),
+      ),
     ),
   );
 }

@@ -26,4 +26,14 @@ class ApiProvider {
       return operations;
     }
   }
+
+  Future<void> createOperation(Operation operation) async {
+    try {
+      dynamic res =
+          await db.collection(operationCollection).add(operation.toMap());
+      print(res);
+    } catch (e) {
+      print(e);
+    }
+  }
 }
