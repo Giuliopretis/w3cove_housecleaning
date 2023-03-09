@@ -2,9 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:w3cove_housecleaning/firebase_options.dart';
-import 'package:w3cove_housecleaning/presentation/resources/theme_manager.dart';
+import 'package:w3cove_housecleaning/ui/resources/theme_manager.dart';
 
-import 'presentation/home_page.dart';
+import 'ui/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
