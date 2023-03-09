@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:w3cove_housecleaning/data/models/operation.dart';
+import 'package:w3cove_housecleaning/core/models/operation.dart';
 import 'package:w3cove_housecleaning/globals.dart';
 
-class ApiProvider {
+class ApiService {
   static var db = FirebaseFirestore.instance;
 
   Future<List<Operation>> getOperationsList() async {

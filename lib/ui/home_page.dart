@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:w3cove_housecleaning/data/api_provider.dart';
-import 'package:w3cove_housecleaning/presentation/operations/operation_view_model.dart';
-import 'package:w3cove_housecleaning/presentation/operations/operations_list.dart';
-import 'package:w3cove_housecleaning/presentation/operations/add_operation_form.dart';
+import '../core/services/api_service.dart';
+import '../viewmodels/operation_view_model.dart';
+import 'operations/add_operation_form.dart';
+import 'operations_list/operations_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,8 +13,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final ApiProvider _apiProvider = ApiProvider();
-  final OperationViewModel _operationViewModel = Get.put(OperationViewModel());
+  final ApiService _apiProvider = ApiService();
+  final OperationsListViewModel _operationViewModel =
+      Get.put(OperationsListViewModel());
 
   @override
   void initState() {

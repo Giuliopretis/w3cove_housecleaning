@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:w3cove_housecleaning/data/api_provider.dart';
-import 'package:w3cove_housecleaning/data/models/operation.dart';
+import 'package:w3cove_housecleaning/core/services/api_service.dart';
+import 'package:w3cove_housecleaning/core/models/operation.dart';
 
-class OperationViewModel extends GetxController {
-  final ApiProvider _apiProvider = ApiProvider();
+class OperationsListViewModel extends GetxController {
+  final ApiService _apiProvider = ApiService();
   RxList<Operation> operations = <Operation>[].obs;
 
   @override
